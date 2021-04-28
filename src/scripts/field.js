@@ -7,3 +7,5 @@ export const addPlant = (seed) => {
 export const usePlants = () => {
     return allPlants.slice()
 }
+
+console.log(allPlants);

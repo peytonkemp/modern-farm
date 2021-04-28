@@ -14,4 +14,4 @@ console.log(usePlants())
 
 addPlant()
 usePlants()
-plantSeeds()
+plantSeeds(yearlyPlan)

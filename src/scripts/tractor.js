@@ -7,6 +7,29 @@ import { createSoybean } from "./seeds/Soybean.js"
 import { addPlant } from "./field.js";
 
 
-export const plantSeeds = (plan) => {
-    
-}
+export const plantSeeds = (yearlyPlan) => {
+    for (const row of yearlyPlan) {
+      for (const plot of row) {
+        if (plot === "Asparagus") {
+          const asparagusSeed = createAsparagus()
+          addPlant(asparagusSeed)
+        } else if (plot === "Corn") {
+          const cornSeed = createCorn()
+          addPlant(cornSeed)
+        } else if (plot === "Potato") {
+          const potatoSeed = createPotato()
+          addPlant(potatoSeed)
+        } else if (plot === "Soybean") {
+          const soybeanSeed = createSoybean()
+          addPlant(soybeanSeed)
+        } else if (plot === "Sunflower") {
+          const sunflowerSeed = createSunflower()
+          addPlant(sunflowerSeed)
+        } else if (plot === "Wheat") {
+          const wheatSeed = createWheat()
+          addPlant(wheatSeed)
+        }
+  
+      }
+    }
+  }
